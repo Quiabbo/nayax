@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NAYAX Kiosk Demo - Design System
+   Brand Colors (HSL):
+   - Black: #212121 → 0 0% 13%
+   - Yellow: #FACA08 → 47 97% 50%
+   - Light Gray: #EDEDED → 0 0% 93%
+   - White: #FFFFFF → 0 0% 100%
+   - Card Purple (Nubank): #8A05BE → 280 96% 38%
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 93%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    --primary: 47 97% 50%;
+    --primary-foreground: 0 0% 13%;
+
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 93%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 280 96% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 47 97% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom brand tokens */
+    --brand-black: 0 0% 13%;
+    --brand-yellow: 47 97% 50%;
+    --brand-gray: 0 0% 93%;
+    --brand-white: 0 0% 100%;
+    --brand-purple: 280 96% 38%;
+    
+    /* Glow effects */
+    --glow-yellow: 0 0 20px hsl(47 97% 50% / 0.8);
+    --glow-purple: 0 0 15px hsl(280 96% 38% / 0.6);
+
+    --sidebar-background: 0 0% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 47 97% 50%;
+    --sidebar-primary-foreground: 0 0% 13%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 47 97% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 13%;
+    --foreground: 0 0% 93%;
+
+    --card: 0 0% 18%;
+    --card-foreground: 0 0% 93%;
+
+    --popover: 0 0% 18%;
+    --popover-foreground: 0 0% 93%;
+
+    --primary: 47 97% 50%;
+    --primary-foreground: 0 0% 13%;
+
+    --secondary: 0 0% 25%;
+    --secondary-foreground: 0 0% 93%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 280 96% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 47 97% 50%;
+    
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 93%;
+    --sidebar-primary: 47 97% 50%;
+    --sidebar-primary-foreground: 0 0% 13%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 93%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 47 97% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-yellow {
+    box-shadow: var(--glow-yellow);
+  }
+  
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+}
