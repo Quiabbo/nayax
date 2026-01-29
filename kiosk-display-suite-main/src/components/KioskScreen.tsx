@@ -50,7 +50,11 @@ const KioskScreen = ({
             <div className="text-4xl font-extrabold text-center">
               Toque para iniciar
             </div>
-            <Button onClick={handleStart} size="lg" className="px-12 py-7 text-2xl rounded-xl">
+            <Button
+              onClick={handleStart}
+              size="lg"
+              className="px-12 py-7 text-2xl rounded-xl"
+            >
               Iniciar
             </Button>
           </div>
@@ -62,10 +66,19 @@ const KioskScreen = ({
             <div className="text-3xl font-extrabold text-center mb-4">
               Escolha uma opção
             </div>
-            <Button onClick={handlePayment} size="lg" className="w-full py-7 text-2xl rounded-xl">
+            <Button
+              onClick={handlePayment}
+              size="lg"
+              className="w-full py-7 text-2xl rounded-xl"
+            >
               💳 Pagamento
             </Button>
-            <Button onClick={handleBack} size="lg" variant="secondary" className="w-full py-7 text-2xl rounded-xl">
+            <Button
+              onClick={handleBack}
+              size="lg"
+              variant="secondary"
+              className="w-full py-7 text-2xl rounded-xl"
+            >
               ← Voltar
             </Button>
           </div>
@@ -102,7 +115,11 @@ const KioskScreen = ({
             <div className="text-3xl font-extrabold text-center">
               Pagamento aprovado!
             </div>
-            <Button onClick={handleBack} size="lg" className="mt-4 px-10 py-7 text-2xl rounded-xl">
+            <Button
+              onClick={handleBack}
+              size="lg"
+              className="mt-4 px-10 py-7 text-2xl rounded-xl"
+            >
               Voltar ao início
             </Button>
           </div>
@@ -117,7 +134,8 @@ const KioskScreen = ({
         center
         distanceFactor={htmlDistanceFactor ?? HTML_DISTANCE_FACTOR}
         scale={htmlScale ?? HTML_SCALE}
-        position={[0, 0, 0.01]} // 🔑 POSIÇÃO RESTAURADA
+        position={[0, 0, 0.01]}
+        zIndexRange={[0, -10]} // 🔽 Coloca a tela abaixo do cartão
         className="select-none"
         style={{
           width: `${(htmlSize ?? HTML_SIZE)[0]}px`,

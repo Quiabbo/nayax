@@ -120,7 +120,7 @@ const CreditCard = ({
 
   return (
     <>
-      {/* Ghost 3D invisível */}
+      {/* Ghost 3D invisível (para detectar aproximação) */}
       <group ref={ghostRef}>
         <RoundedBox
           args={[0.85, 0.54, 0.02]}
@@ -130,8 +130,14 @@ const CreditCard = ({
         />
       </group>
 
-      {/* CARD HUD */}
-      <Html fullscreen style={{ pointerEvents: "none" }}>
+      {/* CARD HUD — sempre acima da tela */}
+      <Html
+        fullscreen
+        zIndexRange={[200, 100]} // 🔥 Garante que o cartão fique acima de todos os Html do Drei
+        style={{
+          pointerEvents: "none",
+        }}
+      >
         <div
           style={{
             position: "absolute",

@@ -72,8 +72,8 @@ const SceneContent = ({
       /* ========================================================================= */
 
       const hotspotPos: [number, number, number] = [
-        bounds.size.x * 0.22,
-        bounds.size.y * 0.48,
+        bounds.size.x * 0.01,
+        bounds.size.y * 0.70,
         bounds.size.z * 0.32,
       ];
 
